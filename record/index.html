@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Student Records</h2>
+        <div class="form-container">
+            <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+                
+                <div>
+                    <label>Full Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter Full Name">
+                    <label class="validation-error hide" id="nameValidationError">This field is required</label>
+                </div>
+                <div>
+                    <label>Roll No</label>
+                    <input type="text" name="rollno" id="rollno" placeholder="Enter Roll No">
+                    <label class="validation-error hide" id="rollnoValidationError">This field is required</label>
+                </div>
+                <div>
+                    <label>B.Tech Year</label>
+                    <input type="text" name="year" id="year" placeholder="Enter B.Tech Year">
+                    <label class="validation-error hide" id="yearValidationError">This field is required</label>
+                </div>
+                <div>
+                    <label>Branch</label>
+                    <input type="text" name="branch" id="branch" placeholder="Enter Branch">
+                    <label class="validation-error hide" id="branchValidationError">This field is required</label>
+                </div>
+                <div>
+                    <label>Section</label>
+                    <input type="text" name="section" id="section" placeholder="Enter Section">
+                    <label class="validation-error hide" id="sectionValidationError">This field is required</label>
+                </div>
+                <div>
+                    <label>Backlogs</label>
+                    <input type="number" name="backlogs" id="backlogs" placeholder="Enter Number of Backlogs">
+                    <label class="validation-error hide" id="backlogsValidationError">This field is required</label>
+                </div>
+                <div class="form-action-buttons">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+        <div class="table-container">
+            <table class="list" id="studentList">
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Roll No</th>
+                        <th>B.Tech Year</th>
+                        <th>Branch</th>
+                        <th>Section</th>
+                        <th>Backlogs</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data rows will be inserted here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
